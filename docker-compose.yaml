@@ -1,0 +1,13 @@
+version: '3'
+services:
+  tensorflow:
+    image: jupyter/datascience-notebook
+    ports:
+      - 8888:8888
+    volumes:
+      - ./data:/home/jovyan/work
+    networks:
+      - nebula
+networks:
+  nebula:
+    external: true
